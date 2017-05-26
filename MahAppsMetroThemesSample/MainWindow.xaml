@@ -1,0 +1,43 @@
+﻿<Controls:MetroWindow
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="AltakIncThemesSample.MainWindow"
+                      Title="Altak Inc."
+                      Width="600"
+                      Height="450"
+                      TitleCharacterCasing="Normal"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      RenderOptions.ClearTypeHint="Enabled"
+                      ResizeMode="CanResizeWithGrip"
+                      TextOptions.TextFormattingMode="Display"
+                      WindowStartupLocation="CenterScreen" Icon="icoAltak.png" IconOverlayBehavior="Flyouts">
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button Click="ChangeAppStyleButtonClick">
+                <StackPanel Orientation="Horizontal">
+                    <iconPacks:PackIconModern Width="24" Height="24" Kind="DrawPaintbrush" />
+                    <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="Change App Style..." />
+                </StackPanel>
+            </Button>
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+    <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="20,20,20,0">
+            <TextBlock FontSize="32"
+                       FontWeight="Light"
+                       Text="Welcome to the Altak Inc. App"
+                       />
+            <Border Height="5" Background="{DynamicResource AccentColorBrush}"/>
+        </StackPanel>
+        <Canvas Margin="20.666,141.334,20.667,123.666" >
+            <Button x:Name="button" Width="75" Canvas.Left="304.002" Canvas.Top="83.328" BorderBrush="{DynamicResource AccentColorBrush}" Content="Generate"/>
+            <Button x:Name="button1" Content="Export" Width="75" Canvas.Left="391.002" Canvas.Top="83.328"
+                        BorderBrush="{DynamicResource AccentColorBrush}"/>
+            <DatePicker Canvas.Left="193.999" Canvas.Top="83.996"/>
+            <TextBlock x:Name="textBlock" Canvas.Left="92.665" TextWrapping="Wrap" Text="Start date:" Canvas.Top="83.996" FontSize="18"/>
+            <TextBlock x:Name="textBlock1" Canvas.Left="-0.667" TextWrapping="Wrap" Text="Required Materials" Canvas.Top="5.665" FontSize="24"/>
+        </Canvas>
+    </Grid>
+</Controls:MetroWindow>
